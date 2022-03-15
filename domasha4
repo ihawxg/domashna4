@@ -1,0 +1,74 @@
+package math;
+
+import java.util.Locale;
+
+public class Uprajnenie {
+    public static void main (String [] args){
+        // 1 Задача:
+
+                short a = -250;
+                short b = 250;
+                int c =  4_589_498;
+                double d = 10_000_000_000_000_000_000d;
+                double e = -9_000_000_000_000_000_000d;
+
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+        System.out.println(d);
+        System.out.println(e);
+
+        // 2 Задача:
+
+        int a2 = 43_112;
+        int b2 = -1_357_674;
+        int c2 = 1_357_674;
+        int d2 =-1_357_674_000;
+        long e2 = 3_657_895_000L;
+
+        System.out.println(a2);
+        System.out.println(b2);
+        System.out.println(c2);
+        System.out.println(d2);
+        System.out.println(e2);
+
+        // 3 Задача:
+
+        double a3 = 4.9876543d;
+        double b3 = 7.123456789012345678890d;
+        double c3 = 18_398_458_438_583_853.28d;
+        double d3 = 18_398_458_438_583_853.39875937284928422d;
+
+        System.out.println(a3);
+        System.out.println(b3);
+        System.out.println(c3);
+        System.out.println(d3);
+
+        // Задачи от втората страница
+
+        String ime = "Angel";
+        String familiq = "Manchev";
+        String age= "19";
+        String imepriqtel= "Ivan";
+        String familiqpriqtel = "Draganov";
+        String agepriqtel = "20";
+
+        // 1 Задача:
+        System.out.println(ime);
+        // 2 Задача:
+        System.out.println(ime.equals(imepriqtel));
+        System.out.println(ime.equalsIgnoreCase(imepriqtel));
+        System.out.println(ime.compareTo(imepriqtel));
+        // 3 Задача: (направих я и по двата начина)
+        System.out.println(ime.concat(" ").concat(familiq));
+        System.out.println(String.join(" ",ime,familiq));
+        // 4 Задача:
+        System.out.println(age);
+        // 5 Задача: (направих я и по двата начина)
+        System.out.println(ime.concat(" ").concat(familiq).concat(" ".concat(age)));
+        System.out.println(String.join(" ",ime,familiq,age));
+        // 6 Задача: (направих я и по двата начина)
+        System.out.println(imepriqtel.concat(" ").concat(familiqpriqtel).concat(" ".concat(agepriqtel)));
+        System.out.println(String.join(" ",imepriqtel,familiqpriqtel,agepriqtel));
+    }
+}

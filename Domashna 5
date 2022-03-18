@@ -1,0 +1,72 @@
+package math;
+
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+
+import java.time.Month;
+import java.util.Scanner;
+import java.util.Locale;
+
+
+public class Uprajnenie {
+    public static void main (String [] args){
+
+        // 1 Задача :
+        Scanner Distance = new Scanner(System.in);
+
+        System.out.println("Enter X:");
+        Double x = Distance.nextDouble();
+
+        System.out.println("Enter Y:");
+        Double y = Distance.nextDouble();
+
+        Double result;
+        result = Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
+        System.out.println("Result : "+result);
+
+        // 2 Задача :
+        Scanner SpringSeason = new Scanner(System.in);
+
+        System.out.println("Enter Month:");
+        int M = Distance.nextInt();
+
+        System.out.println("Enter Day:");
+        int D = Distance.nextInt();
+
+        Boolean Month_Day = (M >= 3 && M<=6) && (D >= 20 && D<=31);
+        String Spring_Season = Month_Day ? "yes" : "false";
+        System.out.println(Spring_Season);
+
+        // 3 Задача :
+        Scanner zad = new Scanner(System.in);
+
+        System.out.println("Enter Weight (KGs):");
+        Double Weight = zad.nextDouble();
+
+        System.out.println("Enter Height (CMs):");
+        Double Height = zad.nextDouble();
+
+        Double BMI;
+        BMI = Weight/(Math.pow(Height,2));
+        final DecimalFormat df = new DecimalFormat("0.0");
+        System.out.println(df.format(BMI));
+
+        if (BMI <= 18.5)
+        {
+            System.out.println("Underweight");
+        }
+        if (BMI >= 18.5 && BMI <= 24.9)
+        {
+            System.out.println("Normal");
+        }
+        if (BMI >= 25.0 && BMI <= 29.9)
+        {
+            System.out.println("Overweight");
+        }
+        if (BMI >= 30.0)
+        {
+            System.out.println("Very Overweight");
+        }
+
+    }
+}

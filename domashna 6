@@ -1,0 +1,53 @@
+package math;
+
+import java.util.*;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+
+import java.time.Month;
+import java.util.Scanner;
+import java.util.Locale;
+
+
+public class Uprajnenie {
+    public static void main (String [] args){
+
+        // 1 Задача :
+
+        Scanner zad = new Scanner(System.in);
+        System.out.println("Enter a number : ");
+        Double a = zad.nextDouble();
+
+        // 1-ви начин :
+        System.out.printf("%.5f%n", a);
+
+        // 2-ри начин :
+        DecimalFormat df = new DecimalFormat("0.00000");
+        System.out.println(df.format(a));
+
+        // 2 Задача :
+        Scanner zad1 = new Scanner(System.in);
+        System.out.println("Enter a number : ");
+        Double b = zad.nextDouble();
+
+        // 1-ви начин
+        String chetno_nechetno = (a % 2 == 0) ? "chetno" : "nechetno";
+        System.out.println(chetno_nechetno);
+
+        // 2-ри начин
+        if ( a % 2 == 0 )
+            System.out.println("chisloto e chetno");
+        else
+            System.out.println("chisloto e  nechetno");
+
+        // 3 Задача:
+        int ivancho = 2;
+        int ani = 5;
+        int mariika = 6;
+        int pencho = 4;
+        int borislavcho = 5;
+        System.out.printf(" ivancho: %d%n ani: %d%n mariika: %d%n pencho: %d%n borislavcho: %d%n", ivancho, ani, mariika,pencho,borislavcho);
+        
+    }
+}
+

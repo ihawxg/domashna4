@@ -1,0 +1,130 @@
+package math;
+
+
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+import java.time.Month;
+import java.util.*;
+import java.util.Locale;
+
+public class domashna {
+
+    public static void main (String [] args) {
+
+
+        // 1 задача :
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Vyvedi mesec");
+        int month = scanner.nextInt();
+        System.out.println("Vyvedi den");
+        int day = scanner.nextInt();
+        Boolean Month_Day = (month >= 3 && month <= 6) && (day >= 20 && day <= 31);
+        if (Month_Day) {
+            System.out.println("yes");
+        } else {
+            System.out.println("no");
+        }
+
+        // 2 Задача :
+
+        Scanner zad = new Scanner(System.in);
+
+        System.out.println("Enter Weight (KGs):");
+        Double Weight = zad.nextDouble();
+
+        System.out.println("Enter Height (CMs):");
+        Double Height = zad.nextDouble();
+
+        Double BMI;
+        BMI = Weight / (Math.pow(Height, 2));
+        final DecimalFormat df = new DecimalFormat("0.0");
+        System.out.println(df.format(BMI));
+
+        if (BMI <= 18.5) {
+            System.out.println("Underweight");
+        }
+        if (BMI >= 18.5 && BMI <= 24.9) {
+            System.out.println("Normal");
+        }
+        if (BMI >= 25.0 && BMI <= 29.9) {
+            System.out.println("Overweight");
+        }
+        if (BMI >= 30.0) {
+            System.out.println("Very Overweight");
+        }
+
+        // 3 Задача :
+        System.out.println("vyvedi chislo");
+        Scanner scanner2 = new Scanner(System.in);
+        double chetno_nechetno = scanner2.nextDouble();
+        if (chetno_nechetno % 2 == 0) {
+            System.out.println("chetno");
+        } else {
+            System.out.println("nechetno");
+        }
+
+        // 4 Задача :
+        Scanner triugulnik = new Scanner(System.in);
+        System.out.println("vyvedi x :");
+        double x = triugulnik.nextDouble();
+        System.out.println("vyvedi y :");
+        double y = triugulnik.nextDouble();
+        System.out.println("vyvedi z :");
+        double z = triugulnik.nextDouble();
+
+
+        if (x == y && x == z) {
+            System.out.println("Ravnostranen");
+        } else if (x == y || x == z || y == z) {
+            System.out.println("ravnobedren");
+        } else if (x != y && x != z) {
+            System.out.println("raznostranen");
+        }
+
+        Scanner mesec = new Scanner(System.in);
+        System.out.println("vyvedi mesec :");
+        int mesec1 = mesec.nextInt();
+        switch (mesec1) {
+            case 1:
+                System.out.println("Qnuari");
+                break;
+            case 2:
+                System.out.println("Fevruari");
+                break;
+            case 3:
+                System.out.println("Mart");
+                break;
+            case 4:
+                System.out.println("April");
+                break;
+            case 5:
+                System.out.println("Mai");
+                break;
+            case 6:
+                System.out.println("Uni");
+                break;
+            case 7:
+                System.out.println("Uli");
+                break;
+            case 8:
+                System.out.println("Avgust");
+                break;
+            case 9:
+                System.out.println("Semptemvri");
+                break;
+            case 10:
+                System.out.println("Oktomvri");
+                break;
+            case 11:
+                System.out.println("Noemvri");
+                break;
+            case 12:
+                System.out.println("Dekemvri");
+                break;
+            default:
+                System.out.println("Invalid");
+
+        }
+    }
+}

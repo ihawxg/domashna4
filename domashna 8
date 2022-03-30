@@ -1,0 +1,114 @@
+package math;
+
+
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+import java.time.Month;
+import java.util.*;
+import java.util.Locale;
+
+import static java.lang.Math.sqrt;
+
+public class domashna {
+
+    public static void main(String[] args) {
+        int topcheta = 20;
+        topcheta = topcheta - 2;
+        topcheta = topcheta - 5;
+        topcheta = topcheta - 3;
+        topcheta = topcheta + 2;
+        topcheta = topcheta - 4;
+        topcheta = topcheta - 6;
+        topcheta = topcheta + 5;
+        topcheta = topcheta - 2;
+
+        System.out.println(topcheta);
+
+        double price;
+        int size;
+        boolean isitblack = false;
+        boolean canreturn = true;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter price");
+        price = scanner.nextDouble();
+        System.out.println("enter size");
+        size = scanner.nextInt();
+
+
+        if ((price <= 150) && (size >= 44 && size <= 45) && (!isitblack) && (canreturn)) {
+            System.out.println("Stavat");
+        } else {
+            System.out.println("ne stavat");
+        }
+
+        int year;
+        System.out.println("enter a year");
+        year = scanner.nextInt();
+        System.out.println("----");
+        boolean Deli_li_se_na_100 = year % 100 == 0;
+        boolean Deli_li_se_na_100_i_na_400 = (year % 100) == 0 && (year % 400) == 0;
+        boolean deli_li_se_na_4 = year % 4 == 0;
+
+        if ((Deli_li_se_na_100 || Deli_li_se_na_100_i_na_400) && (deli_li_se_na_4)) {
+            System.out.println("Visokosna");
+        } else {
+            System.out.println("ne visokosna");
+        }
+
+        System.out.println("vuvedi bukva");
+        String bukva = scanner.next();
+
+        boolean glavnibukvi = bukva.charAt(0) >= 65 && bukva.charAt(0) <= 90;
+        boolean neglavnibukvi = bukva.charAt(0) >= 97 && bukva.charAt(0) <= 122;
+
+        boolean glasni = bukva.equalsIgnoreCase("a")
+                || bukva.equalsIgnoreCase("e")
+                || bukva.equalsIgnoreCase("i")
+                || bukva.equalsIgnoreCase("o")
+                || bukva.equalsIgnoreCase("u");
+        if (bukva.length() > 1) {
+            System.out.println("ne e edin character");
+        } else if (!(glavnibukvi || neglavnibukvi)) {
+            System.out.println("Ne e bukva. Vuvedi glavna ili ne glavna bukva");
+        } else if (glasni) {
+            System.out.println("Bukvata e glasna");
+        } else {
+            System.out.println("bukvata e suglasna");
+        }
+
+
+        double a;
+        double b;
+        double c;
+        double D;
+
+        System.out.println("enter a");
+        a = scanner.nextDouble();
+        System.out.println("enter b");
+        b = scanner.nextDouble();
+        System.out.println("enter c");
+        c = scanner.nextDouble();
+        D = (b*b)-4*a*c;
+        System.out.println("D ="+D);
+        if (D> 0)
+        {
+            double x1;
+            double x2;
+            x1= (-b + Math.sqrt(D))/ (2*a);
+            x2= (-b - Math.sqrt(D))/ (2*a);
+            System.out.println("X1= "+x1);
+            System.out.println("X2= "+x2);
+        }
+        else if (D==0)
+        {
+            double x;
+        x = (-b - Math.sqrt(D))/ (2*a);
+            System.out.println("x= "+x);
+        }
+        else if (D < 0){
+            System.out.println("nqma realni koreni");
+        }
+
+    }
+}
